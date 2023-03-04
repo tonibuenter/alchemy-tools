@@ -1,0 +1,45 @@
+{
+  "name": "alchemy-tools",
+  "version": "1.0.0",
+  "description": "A variety of scripts using alchemy-sdk",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node src/getting-started.ts",
+    "mnemonic-to-pk": "ts-node src/mnemonic-check.ts",
+    "mining-address": "ts-node src/mining-address.ts",
+    "balance": "ts-node src/balance.ts",
+    "send-matic": "ts-node src/send-matic.ts",
+    "demo-compile": "ts-node src/demo-compile.ts",
+    "demo-deploy": "ts-node src/demo-deploy.ts",
+    "demo-call": "ts-node src/demo-call.ts",
+    "test": "mocha -r ts-node/register ./test/**/*test.ts"
+  },
+  "keywords": [
+    "generation",
+    "eth",
+    "polygon",
+    "matic",
+    "smartcontract",
+    "education",
+    "ethereum"
+  ],
+  "author": "tonibuenter",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "alchemy-sdk": "^2.5.0",
+    "solc": "^0.8.19"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "chai": "^4.3.7",
+    "global-jsdom": "^8.7.0",
+    "ignore-styles": "^5.0.1",
+    "mocha": "^10.2.0",
+    "prettier": "^2.2.1",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0"
+  }
+}
