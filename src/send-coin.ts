@@ -3,17 +3,17 @@ import 'dotenv/config';
 import { getBalances, newAlchemy } from './utils';
 import { Utils, Wallet } from 'alchemy-sdk';
 
-const network = process.env.ETHEREUM_NETWORK;
+const network = process.env.NETWORK;
 
 const address = process.env.MAIN_ADDRESS;
 const privateKey = process.env.MAIN_PRIVATE_KEY;
 const x0000Address = process.env.X0000_ADDRESS;
-const ethValue = '0.1';
-const ethValueWei = Utils.parseEther(ethValue);
+const coinValue = '0.03';
+const coinValueWei = Utils.parseEther(coinValue);
 
-console.log(`Sending ${ethValue} ETH \nfrom : ${address} \nto   : ${x0000Address} \non network: ${network}`);
+console.log(`Sending ${coinValue} ETH \nfrom : ${address} \nto   : ${x0000Address} \non network: ${network}`);
 
-async function sendMatic() {
+async function sendCoin() {
   try {
     // Configuring the connection to an Ethereum node
     const provider = newAlchemy();
@@ -27,7 +27,7 @@ async function sendMatic() {
     // Creating and sending the transaction object
     const tx = await signer.sendTransaction({
       to: x0000Address,
-      value: ethValueWei
+      value: coinValueWei
     });
     console.log('Mining transaction...');
     console.log(`https://${network}.etherscan.io/tx/${tx.hash}`);
@@ -39,7 +39,7 @@ async function sendMatic() {
     const balancesAfter = await getBalances([address, x0000Address]);
     balancesAfter.forEach(({ address, wei }) => console.log(`balance ${address}: ${Utils.formatEther(wei)}`));
 
-    const fee = balancesBefore[0].wei - Utils.parseEther(ethValue).toBigInt() - balancesAfter[0].wei;
+    const fee = balancesBefore[0].wei - Utils.parseEther(coinValue).toBigInt() - balancesAfter[0].wei;
     console.log(`gas used          WEI: ${receipt.gasUsed}`);
     console.log(`cumulativeGasUsed WEI: ${receipt.cumulativeGasUsed}`);
     console.log(`fee difference WEI: ${fee}`);
@@ -51,4 +51,4 @@ async function sendMatic() {
   }
 }
 
-sendMatic();
+sendCoin();

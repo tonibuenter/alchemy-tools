@@ -14,6 +14,7 @@ const settings = {
 let _alchemy: Alchemy;
 
 export function newAlchemy(): Alchemy {
+  console.log(`new Alchemy for network: ${settings.network}`);
   return new Alchemy(settings);
 }
 

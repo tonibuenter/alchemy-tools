@@ -15,7 +15,7 @@ console.log(`Deploy Demo.sol contract...\nowner : ${address}`);
 
 async function callDemoContract() {
   try {
-    const { abi } = JSON.parse(fs.readFileSync('./contracts/Demo.json').toString('utf-8'));
+    const { abi } = JSON.parse(fs.readFileSync('./contracts/SupplyChain.json').toString('utf-8'));
 
     // Configuring the connection to an Ethereum node
     const provider = newAlchemy();

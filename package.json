@@ -8,10 +8,14 @@
     "mnemonic-to-pk": "ts-node src/mnemonic-check.ts",
     "mining-address": "ts-node src/mining-address.ts",
     "balance": "ts-node src/balance.ts",
-    "send-matic": "ts-node src/send-matic.ts",
+    "send-coin": "ts-node src/send-coin.ts",
     "demo-compile": "ts-node src/demo-compile.ts",
     "demo-deploy": "ts-node src/demo-deploy.ts",
     "demo-call": "ts-node src/demo-call.ts",
+    "polysafe-compile": "ts-node src/polysafe-compile.ts",
+    "polysafe-deploy": "ts-node src/polysafe-deploy.ts",
+    "polysafe-call-length": "ts-node src/polysafe-call-length.ts",
+    "polysafe-call-add": "ts-node src/polysafe-call-add.ts",
     "test": "mocha -r ts-node/register ./test/**/*test.ts"
   },
   "keywords": [
@@ -26,8 +30,9 @@
   "author": "tonibuenter",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.0.3",
     "alchemy-sdk": "^2.5.0",
+    "dotenv": "^16.0.3",
+    "moment": "^2.29.4",
     "solc": "^0.8.19"
   },
   "devDependencies": {
