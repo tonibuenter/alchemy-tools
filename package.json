@@ -14,7 +14,7 @@
     "demo-call": "ts-node src/demo-call.ts",
     "polysafe-compile": "ts-node src/polysafe-compile.ts",
     "polysafe-deploy": "ts-node src/polysafe-deploy.ts",
-    "polysafe-call-length": "ts-node src/polysafe-call-length.ts",
+    "polysafe-call-len": "ts-node src/polysafe-call-len.ts",
     "polysafe-call-add": "ts-node src/polysafe-call-add.ts",
     "test": "mocha -r ts-node/register ./test/**/*test.ts"
   },

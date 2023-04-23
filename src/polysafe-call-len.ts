@@ -28,7 +28,7 @@ async function callPolysafeContract() {
 
     const contract = new Contract(polysafeContractAddress, abi, signer);
     // Issuing a transaction that calls the `echo` method
-    const tx = await contract.length();
+    const tx = await contract.len();
     console.log('Mining transaction...');
     console.log(`https://${network}.etherscan.io/tx/${tx.hash}`);
     // Waiting for the transaction to be mined
