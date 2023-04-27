@@ -10,7 +10,7 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import { useContext, useState } from 'react';
 import { ColorModeContext } from './RouterApp';
 import { useNetworkId, usePublicAddress } from '../redux-support';
-import { NavLink } from './Head2';
+import { NavLink } from './WithStyles';
 
 export function ToolbarTop({ routerInfo }: { routerInfo: { path: string; label: string }[] }) {
   const theme = useTheme();

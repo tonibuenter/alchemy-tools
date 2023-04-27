@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 import { Button, Stack, TextField } from '@mui/material';
 import { Wallet } from 'alchemy-sdk';
-import { Head2 } from './Head2';
+import { Head2 } from './WithStyles';
 import { dispatchStatusMessage } from '../redux-support';
 import { errorMessage } from '../types';
 

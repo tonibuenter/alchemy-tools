@@ -18,7 +18,7 @@ export const miningState: MiningState = {
   message: 'initial'
 };
 
-const timeoutMs = 20;
+const getTimeoutMs = () => (miningState.update ? 20 : 0);
 
 function notify() {
   miningState.update && miningState.update();
@@ -29,7 +29,7 @@ export function startMining() {
   miningState.mining = true;
   miningState.message = 'waiting to start...';
   notify();
-  window.setTimeout(miningTask, timeoutMs);
+  window.setTimeout(miningTask, getTimeoutMs());
 }
 
 function miningTask() {
@@ -54,7 +54,7 @@ function miningTask() {
       miningState.message = `Mining done for ${wallet.mnemonic.phrase}`;
     }
     if (counter < miningState.batchSize && miningState.mining) {
-      setTimeout(oneStep, timeoutMs);
+      setTimeout(oneStep, getTimeoutMs());
     } else {
       if (miningState.mining) {
         miningState.message = `Nothing found!`;
