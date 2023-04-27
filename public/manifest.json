@@ -1,0 +1,15 @@
+{
+  "short_name": "Tools",
+  "name": "Alchemy Tools",
+  "icons": [
+    {
+      "src": "tool200.png",
+      "type": "image/png",
+      "sizes": "141x141"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

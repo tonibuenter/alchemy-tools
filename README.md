@@ -1,4 +1,4 @@
-# Alchemy Tools
+# Alchemy Mnemonic2Keys
 
 ![PXL_20230301_213619882_3.jpg](docs%2FPXL_20230301_213619882_3.jpg)
 

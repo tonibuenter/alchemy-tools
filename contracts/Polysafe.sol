@@ -11,7 +11,6 @@ contract Polysafe
 
     mapping(address => Item[]) itemLists;
     mapping(address => string) keys;
-    mapping(address => uint) private itemListIndexes;
 
     function add(string memory _name, string memory _value, string memory _inserted) public
     {
